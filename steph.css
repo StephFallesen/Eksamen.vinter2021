@@ -1,0 +1,208 @@
+___fonts
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+
+html { font-size: 14px; padding: 30px;}
+body {
+  font-family: "Genos", sans-serif;
+  font-weight: 100;
+  overflow: scroll;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 1.5fr 1.5fr 1.5fr 1.5fr 1fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main main main"
+    "content1 content1 content1 content1"
+    "content2 content2 content2 content2"
+    "content3 content3 content4 content4"
+    "footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #004d40;
+  text-align: center;
+}
+
+nav {
+  background: #333;
+  display: inline-flex;
+  position: fixed;
+  justify-content: flex-end;
+  align-items: baseline;
+  font-family:"Genos", sans-serif, "Times New Roman";
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  width: 100%;
+  color: #eae2b7;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.2s;
+  top: 0;
+  left: 0;
+  text-shadow: 3 3 3;
+  z-index: 10;
+}
+
+nav.logo1 {
+  height: auto;
+  width: 1rem;
+}
+
+a{
+  color: #eae2b7;
+}
+
+a:hover {
+  color: #f77f00;}
+
+main {
+  background: none;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#contactbutton{
+  padding-right: 50px;
+}
+
+.banner_container{
+height: auto;
+width: 100%;
+}
+
+.banner {
+  height: auto;
+  width: 100%;
+  opacity: 100%;
+  position: static;
+}
+
+.centered {
+  height: auto;
+  position: static;
+  left: 25%;
+  transform: translate(-20%, -260%);
+}
+
+h1 {
+  font-family: "Comforter Brush","Times New Roman";
+  font-size: 7vw;
+  font-weight: 800;
+  font-style: italic;
+  text-align: center;
+  text-transform: capitalize;
+  color: #f77f00;
+  line-height: 0px;
+  letter-spacing: 7px;
+}
+h2 {
+  font-family:serif, "Times New Roman";
+  font-size: 2vw;
+  font-weight: 400;
+  font-style: bold;
+  text-align: center;
+  text-transform: capitalize;
+  color: #eae2b7;
+  line-height: 1vw;
+  letter-spacing: -1px;
+}
+
+p {
+  font-family: Arial,sans-serif, "Times New Roman";
+  font-size: 14px;
+  line-height: 21px;
+  text-indent: 0px;
+  text-align: left;
+  color: black;
+}
+button {
+  padding: 9px 30px;
+  background-color: rgba(247, 127, 0, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-family:sans-serif, "Times New Roman";
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+button:hover {
+  background-color: rgba(247, 127, 0, 0.8);
+}
+
+#content1 {
+  background: #6fffd2;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content2 {
+  background: #64ffda;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content3 {
+  background: #6fffd2;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+#content4 {
+  background: #64ffda;
+  grid-area: content4;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+footer {
+  background: #1de9b6;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "content4"
+      "footer";
+  }
+  .centered {
+    height: auto;
+    position: static;
+    left: 25%;
+    transform: translate(-10%, -260%);
+  }
+}
