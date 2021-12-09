@@ -8,3 +8,13 @@ h1 {
   line-height: 0px;
   letter-spacing: 7px;
 }
+h2 {
+    font-family:serif, "Times New Roman";
+  font-size: 2vw;
+  font-weight: 400;
+  font-style: bold;
+  text-align: center;
+  text-transform: capitalize;
+  color: #eae2b7;
+  line-height: 1vw;
+}
